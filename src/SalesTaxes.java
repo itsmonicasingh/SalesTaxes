@@ -52,9 +52,12 @@ public class SalesTaxes {
     public static void main(String[] args) {
         //System.out.print("hello");
         int n;
+        float sales_tax;
         float itemPrice;
         String name;
-        String itemCategory;
+        String itemCategory = null;
+        boolean isImported = false;
+
         System.out.println("enter the number of items: ");
         Scanner user_input = new Scanner( System.in );
         n = user_input.nextInt();
@@ -66,9 +69,26 @@ public class SalesTaxes {
             itemCategory = user_input.next();
             System.out.println("enter the item price: ");
             itemPrice = user_input.nextFloat();
-        }
+            System.out.println("is the item imported? (true/false): ");
+            isImported = user_input.nextBoolean();
 
-        if()
+            if( itemCategory == "books" || itemCategory == "food" || itemCategory == "medical"){
+                if(isImported == true){
+                    sales_tax = 
+                }
+                else{
+                    //tax = 0%;
+                }
+            }
+            else{
+                if(isImported == true){
+                    //tax = 15%;
+                }
+                else{
+                    //tax = 10%;
+                }
+            }
+        }
 
 
 
