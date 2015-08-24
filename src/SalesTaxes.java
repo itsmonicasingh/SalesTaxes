@@ -99,8 +99,8 @@ public class SalesTaxes {
         for (int i = 0; i < n; i++){
             tot_price += itemPrice[i];
         }
-        System.out.println("Sales Tax: " + Math.round(tot_tax));
-        System.out.println("Total: " + Math.round(tot_price));
+        System.out.println("Sales Tax: " + Math.round(tot_tax * 20.0)/20.0);
+        System.out.println("Total: " + Math.round(tot_price * 20.0)/20.0);
 
 
 
