@@ -3,7 +3,7 @@
  */
 
 import java.util.Scanner;
-
+import java.util.*;
 public class SalesTaxes {
 
     /*
@@ -99,8 +99,8 @@ public class SalesTaxes {
         for (int i = 0; i < n; i++){
             tot_price += itemPrice[i];
         }
-        System.out.println("Sales Tax: " + tot_tax);
-        System.out.println("Total: " + tot_price);
+        System.out.println("Sales Tax: " + Math.round(tot_tax));
+        System.out.println("Total: " + Math.round(tot_price));
 
 
 
