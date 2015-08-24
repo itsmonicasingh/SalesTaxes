@@ -52,7 +52,7 @@ public class SalesTaxes {
     public static void main(String[] args) {
         //System.out.print("hello");
         int n;
-        float sales_tax;
+        double sales_tax;
         float itemPrice;
         String name;
         String itemCategory = null;
@@ -73,21 +73,22 @@ public class SalesTaxes {
             isImported = user_input.nextBoolean();
 
             if( itemCategory == "books" || itemCategory == "food" || itemCategory == "medical"){
-                if(isImported == true){
-                    sales_tax = 
+                if(isImported == true) {
+                    sales_tax = (0.5) * itemPrice;
                 }
                 else{
-                    //tax = 0%;
+                    sales_tax = 0;
                 }
             }
             else{
                 if(isImported == true){
-                    //tax = 15%;
+                    sales_tax = (0.15) * itemPrice;
                 }
                 else{
-                    //tax = 10%;
+                    sales_tax = (0.10) * itemPrice;
                 }
             }
+            
         }
 
 
