@@ -1,6 +1,9 @@
 /**
  * Created by monicas on 24/08/15.
  */
+
+import java.util.Scanner;
+
 public class SalesTaxes {
 
     public class calculateTax{
@@ -45,9 +48,23 @@ public class SalesTaxes {
 
     public static void main(String[] args) {
         //System.out.print("hello");
+        int n;
+        float itemPrice;
+        String name;
+        String itemCategory;
         System.out.println("enter the number of items: ");
-        
-        System.out.println("enter the item and its category: ");
+        Scanner user_input = new Scanner( System.in );
+        n = user_input.nextInt();
+
+        for (int i = 0 ; i < n; i++){
+            System.out.println("enter the item name: ");
+            name = user_input.next();
+            System.out.println("enter the item category: ");
+            itemCategory = user_input.next();
+            System.out.println("enter the item price: ");
+            itemPrice = user_input.nextFloat();
+        }
+
 
 
     }
