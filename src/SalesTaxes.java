@@ -6,12 +6,14 @@ import java.util.Scanner;
 
 public class SalesTaxes {
 
+    /*
     public class calculateTax{
         int items;
         float sales_tax;
 
     };
-
+    */
+/*
     public class Item {
 
         float itemPrice;
@@ -44,6 +46,7 @@ public class SalesTaxes {
 
         }
     };
+*/
 
 
     public static void main(String[] args) {
@@ -64,6 +67,8 @@ public class SalesTaxes {
             System.out.println("enter the item price: ");
             itemPrice = user_input.nextFloat();
         }
+
+        if()
 
 
 
