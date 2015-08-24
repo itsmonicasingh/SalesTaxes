@@ -52,15 +52,17 @@ public class SalesTaxes {
     public static void main(String[] args) {
         //System.out.print("hello");
         int n;
-        double sales_tax;
-        float itemPrice;
         String name;
         String itemCategory = null;
         boolean isImported = false;
+        float tot_tax = 0;
+        float tot_price = 0;
 
         System.out.println("enter the number of items: ");
         Scanner user_input = new Scanner( System.in );
         n = user_input.nextInt();
+        double [] sales_tax = new double[n];
+        float []itemPrice = new float[n];
 
         for (int i = 0 ; i < n; i++){
             System.out.println("enter the item name: ");
@@ -68,28 +70,37 @@ public class SalesTaxes {
             System.out.println("enter the item category: ");
             itemCategory = user_input.next();
             System.out.println("enter the item price: ");
-            itemPrice = user_input.nextFloat();
+            itemPrice[i] = user_input.nextFloat();
             System.out.println("is the item imported? (true/false): ");
             isImported = user_input.nextBoolean();
 
             if( itemCategory == "books" || itemCategory == "food" || itemCategory == "medical"){
                 if(isImported == true) {
-                    sales_tax = (0.5) * itemPrice;
+                    sales_tax[i] = (0.5) * itemPrice[i];
                 }
                 else{
-                    sales_tax = 0;
+                    sales_tax[i] = 0;
                 }
             }
             else{
                 if(isImported == true){
-                    sales_tax = (0.15) * itemPrice;
+                    sales_tax[i] = (0.15) * itemPrice[i];
                 }
                 else{
-                    sales_tax = (0.10) * itemPrice;
+                    sales_tax[i] = (0.10) * itemPrice[i];
                 }
             }
-            
+
         }
+
+        for (int i = 0; i < n; i++){
+            tot_tax += sales_tax[i];
+        }
+        for (int i = 0; i < n; i++){
+            tot_price += itemPrice[i];
+        }
+        System.out.println("Sales Tax: " + tot_tax);
+        System.out.println("Total: " + tot_price);
 
 
 
