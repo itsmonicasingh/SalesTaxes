@@ -11,8 +11,9 @@ public class SalesTaxes {
 
     public class Item {
 
-        protected float itemPrice;
-        private String name;
+        float itemPrice;
+        String name;
+        String itemCategory;
 
         public String getItemDescription() {
             return name;
@@ -20,6 +21,15 @@ public class SalesTaxes {
 
         public void setItemDescription(String itemName){
             name = itemName;
+        }
+
+        public String getItemCategory() {
+            return itemCategory;
+        }
+
+        public void setItemCategory(String category) {
+            itemCategory = category;
+
         }
 
         public float getItemPrice() {
@@ -35,6 +45,10 @@ public class SalesTaxes {
 
     public static void main(String[] args) {
         //System.out.print("hello");
+        System.out.println("enter the number of items: ");
+        
+        System.out.println("enter the item and its category: ");
+
 
     }
 }
